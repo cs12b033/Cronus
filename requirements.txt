@@ -1,7 +1,13 @@
-Django==2.1.15
+asgiref==3.2.3
+beautifulsoup4==4.8.2
+bootstrap4==0.1.0
+dataclasses==0.7
+Django==3.0.2
+django-admin-honeypot==1.1.0
+django-bootstrap4==1.1.1
+djangorestframework==3.11.0
 djongo==1.2.29
-pip==18.0
 pymongo==3.7.1
-setuptools==40.2.0
-wheel==0.31.1
 pytz==2018.5
+soupsieve==1.9.5
+sqlparse==0.3.0
