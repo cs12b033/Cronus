@@ -1,0 +1,35 @@
+
+	"iNum" : "253646",
+	"name" : "Employee 1",
+	"entity" : "Company Labs",
+	"oraganization" : "Org 1",
+	"current_project" : "Project 1",
+	"isStaffed" : false,
+	"booked_till" : "",
+	"previous_projects" : {
+		"Project 2" : {
+			"start" : "",
+			"end" : ""
+		},
+		"Project 3" : {
+			"start" : "",
+			"end" : ""
+		}
+
+	},
+	"skillSets" : {
+		"technology" : {
+			"year" : 1.0,
+			"numberOfProjects" : 2.0
+		},
+		"computer_vision" : {
+			"year" : 1.0,
+			"numberOfProjects" : 1.0
+		}
+	},
+	"interests" : [ "Company", "IOT", 	"BLOCKCHAIN" ],
+	"designation" : "Associate Developer",
+	"tier" : "Tier2",
+	"grade" : "L3",
+	"experience" : 1.0,
+	"isManagement" : false

@@ -1,0 +1,15 @@
+isStaffed 		= models.BooleanField(default=True)
+	currentProject 	= models.CharField(max_length=100, null=False, blank=False, default='None')
+	bookedTill 		= models.DateTimeField(auto_now_add=True, null=False, blank=False)
+	skillSets 		= models.CharField(max_length=100, null=False, blank=False, default='None')
+	interests		= models.CharField(max_length=100, null=False, blank=False, default='None')
+	
+
+iNum
+name, designation, tier, grade, experience, isManagement, password
+
+isStaffed
+currentProject
+bookedTill
+skillSets
+interests

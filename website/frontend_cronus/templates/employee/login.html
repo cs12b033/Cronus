@@ -1,0 +1,48 @@
+{% extends 'employee/employee_base.html' %}
+{% block title %}Cronus - Employee Login{% endblock %}
+{% block content %}
+	<h1>
+	    Welcome to Employee Login Page
+	</h1>
+	
+    <div id="content-container" class="container p-none" style="align-content='middle'">
+        <div class="lgn-container col-lg-8">
+            <form id="login-form" method="POST" 
+                  action="">
+                {% csrf_token %}
+                <table class="table">
+                    <tr>
+                        <td><label for="iNum">I-Number</label></td>
+                        <td>
+                            <!-- <input type="text" name="I" readonly value="I""> -->
+                            <input id="iNum" name="iNum" 
+                                   type="text" placeholder="I341551" class="form-control" autocomplete="off">
+                               </td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password</label></td>
+                        <td><input id="password" name="password" 
+                                   type="password" class="form-control"></td>
+                    </tr>
+                </table>
+                {% if form.errors %}
+                    <div class=" label label-danger" style="background-color: orange; ">
+                        Failed to Login! </br> 
+                        {{ form.errors }}
+                    </div>
+                {% endif %}
+
+                <input type="submit" value="Login" 
+                       class="btn btn-primary pull-right" />
+                <input type="hidden" name="next" value="{{ next }}" />
+
+            </form>
+        </div>
+    </div>
+    <div class="employee-login-note" style="position: absolute;bottom: 10px; border: 20px;padding: 20px;background: yellow;">
+    <p>
+        NOTE: For logging in as Management, <a href="/management/login">click here</a>
+
+    </p>
+    </div>
+{% endblock content %}

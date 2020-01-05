@@ -1,0 +1,72 @@
+{% load static %}
+{% load staticfiles %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% get_current_language as language_code %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+		<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+		<link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+		<script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+		
+		<script src="{% static 'assets/vendor/jquery/jquery-3.3.1.min.js' %}"></script>
+		<script src="{% static 'assets/vendor/popper/popper.min.js' %}"></script>
+		<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+		<!-- <script src="{% static 'assets/js/ie10-viewport-bug-workaround.js' %}"></script> -->
+		<!-- <link rel="icon" href="{% static 'assets/images/favicon.ico' %}"> -->
+		
+		<style>
+			{% block styleblock %}
+			{% endblock %}
+		</style>
+		<title>
+		{% block title %}
+		{% endblock %}
+		</title>
+	</head>
+	<body>
+		 
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark static-top">
+
+			<a class="navbar-brand" href="/">{% trans 'Home' %}</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+				<ul class="navbar-nav mr-auto">
+					{% if request.user.is_authenticated %}
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'management:logout' %}">{% trans 'Log out' %}</a>
+					</li>
+					{% else %}
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'management:index' %}">{% trans 'Help' %}</a>
+					</li>
+					{% endif %}
+				</ul>	
+			</div>
+
+		</nav>
+ 		
+		<main>
+			<div class="container-fluid mt-3">
+
+			{% bootstrap_messages %}
+			{% block content %}
+				No content.
+			{% endblock %}
+
+			</div>
+
+		</main>
+	</body>
+</html>

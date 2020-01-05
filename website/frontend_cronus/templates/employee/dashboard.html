@@ -1,0 +1,11 @@
+{% extends 'employee/employee_base.html' %}
+{% block title %}Cronus - Employee Dashboard{% endblock %}
+{% block content %}
+	<h1>Welcome {{ user.username }} to Employee Dashboard</h1>
+    {% csrf_token %}
+    Hello there,</br>
+    Email: {{ user.email }}</br>
+    Last Name: {{ user.last_name }}</br>
+    I-Number: {{ user.iNum }}</br>
+    
+{% endblock content %}

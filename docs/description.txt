@@ -1,0 +1,9 @@
+List of skills to be chosen will be added by Admin
+Management flag will be false by default. Only Admin can approve and make it true
+Management will have access to information about one tier lesser employees (e.g. T5 Employee can view for T4 and below employee details)
+Assumption is that this will be an internal network which can only be accessed within Company network and on Company Laptops with trusted certificates  
+profession and what will it cover will be added by Admins 
+
+* admin page will have access to full database (as GUI), with special shortcut to approve employees to management roles
+* management page will only have login option
+* employee will have both login and signIn option

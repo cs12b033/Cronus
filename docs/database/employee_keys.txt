@@ -1,0 +1,12 @@
+iNum
+name
+isStaffed
+currentProject
+bookedTill
+skillSets
+interests
+designation
+tier
+grade
+experience
+isManagement

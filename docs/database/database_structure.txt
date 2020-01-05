@@ -1,0 +1,30 @@
+		# Collection : RESUME
+iNum : string (PK)													*
+name : string 
+entity : string
+oraganization : string
+current_project : string
+isStaffed : boolean
+booked_dates : list of dates
+previous_projects : {
+   @project_name : {
+      "start" : date
+      "end" : date
+   }
+}
+skillSets : {														*
+	@skill : {
+		"year" : integer (in years)
+		"numberOfProjects" : integer (as  countables)
+		}
+}
+interests : list of strings
+designation : string
+tier : string 															[confidential]
+grade : string 															[confidential]
+experience : integer (in years) 
+isManagement : boolean 													[to be filled by admin]
+
+
+=-=-=
+

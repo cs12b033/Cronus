@@ -1,0 +1,183 @@
+db.createCollection("resume");
+db.createCollection("job");
+db.createCollection("project");
+
+db.resume.createIndex({iNum:1},{unique:true})
+db.job.createIndex({jobID:1},{unique:true})
+db.project.createIndex({projectId:1},{unique:true})
+
+db.resume.insertMany([
+   	{
+   		iNum : "24654363",
+   		name : "Employee 1",
+   		entity : "Company Labs",
+   		oraganization : "IBSO",
+   		current_project : "Project 1",
+   		isStaffed : false,
+   		booked_till : "",
+   		previous_projects : {
+            "Project 2" : {
+               "start" : "",
+               "end" : ""
+            },
+            "Project 3" : {
+               "start" : "",
+               "end" : ""
+            }
+         },
+   		skillSets : {
+   			"technology" : {
+   				"year" : 1,
+   				"numberOfProjects" : 2
+				},
+            "computer_vision" : {
+               "year" : 1,
+               "numberOfProjects" : 1
+            }
+			},
+   		interests : ["Company Leonardo", "IOT", "BLOCKCHAIN"],
+   		designation : "Lead Developer",
+   		tier : "Tier4",
+   		grade : "L2",
+   		experience : 1,
+   		isManagement : false
+   	},
+   	{
+   		iNum : "1345425353",
+   		name : "Sanjay Leela Bhansali",
+   		entity : "Company Labs",
+   		oraganization : "IBSO",
+   		current_project : "DU",
+   		isStaffed : true,
+   		booked_till : "2018-09-10",
+         previous_projects : {
+            "BASF" : {
+               "start" : "",
+               "end" : ""
+            },
+            "Stockland" : {
+               "start" : "",
+               "end" : ""
+            }
+         },
+         skillSets : {
+            "technology" : {
+               "year" : 1,
+               "numberOfProjects" : 2
+            }
+         },
+   		interests : ["Company Hana"],
+   		designation : "Associate Developer",
+   		tier : "T2",
+   		grade : "L1",
+   		experience : 1,
+   		isManagement : false
+   	},
+	{
+   		iNum : "1536471",
+   		name : "Bhoot Naath",
+   		entity : "Company Labs",
+   		oraganization : "IBSO",
+   		current_project : "RIO",
+   		isStaffed : true,
+   		booked_till : "2018-09-21",
+         previous_projects : {
+            "MSD" : {
+               "start" : "",
+               "end" : ""
+            }
+         },
+         skillSets : {
+            "technology" : {
+               "year" : 2,
+               "numberOfProjects" : 3
+            },
+            "java" : {
+               "year" : 1,
+               "numberOfProjects" : 1
+            }
+         },
+   		interests : ["ABAP"],
+   		designation : "Developer",
+   		tier : "Tier3",
+   		grade : "L7",
+   		experience : 1,
+   		isManagement : false
+   	},
+   	{
+   		iNum : "GE253744",
+   		name : "Elon Musk",
+   		entity : "Company Labs",
+   		oraganization : "IBSO",
+   		current_project : "",
+   		isStaffed : false,
+         booked_till : "",
+         previous_projects : {
+
+         },
+         skillSets : {
+
+         },
+   		interests : [],
+   		designation : "Line Manager",
+   		tier : "T5",
+   		grade : "L3",
+   		experience : 1,
+   		isManagement : true
+   },
+])
+
+db.job.insertMany([
+   {
+   		jobID : "314515262",
+   		minTier : "Tier1",
+   		maxTier : "Tier2",
+         projectId : "4367572",
+   		description : "Technology Developer with sound knowledge of Technology and Java",
+   		skillSets : {
+   			"technology" : {
+   				"minYear" : 1,
+				},
+            "java" : {
+               "minYear" : 0
+            }
+			},
+   		profession : "Developer",
+   		minExperience : 0
+   },
+   {
+         jobID : "76324536",
+         minTier : "Tier3",
+         maxTier : "Tier3",
+         projectId : "2456376",
+         description : "Senior Technology Developer with sound knowledge of Technology and Java",
+         skillSets : {
+            "technology" : {
+               "minYear" : 4
+            },
+            "java" : {
+               "minYear" : 2
+            }
+         },
+         profession : "Developer",
+         minExperience : 0
+   }
+])
+
+
+db.project.insertMany([
+   {
+   		projectId : "4367572",
+   		projectName : "Project 1",
+         zone : "APJ",
+   		entity : "Company Labs",
+   		oraganization : "IBSO",
+         duration : {
+            "start" : "2018-03-21",
+            "end" : "2018-11-23"
+         },
+         jobs : ["314515262", "76324536"]
+   }
+])
+
+
