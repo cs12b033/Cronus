@@ -31,7 +31,8 @@ urlpatterns = [
     url(r'^management/', include('management.urls', namespace='management')),
     # url(r'^$', TemplateView.as_view(template_name="index.html")),
     url(r'^index$|^home$|^$', TemplateView.as_view(template_name="index.html")),
+    # url(r'^test$', "Hello"),
     url(r'^.*$', TemplateView.as_view(template_name="pageNotFound.html")),
-] 
+]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

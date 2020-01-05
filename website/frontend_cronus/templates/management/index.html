@@ -7,18 +7,18 @@
 </h1>
     <div id="content-container" class="container p-none" style="align-content='middle'">
         <div class="lgn-container col-lg-8">
-            <form id="register-form" method="post" 
+            <form id="register-form" method="post"
                   action="">
                 {% csrf_token %}
                 <table class="table">
                     <tr>
                         <td><label for="iNum">iNum</label></td>
-                        <td><input id="iNum" name="iNum" 
-                                   type="text" placeholder="I341551" class="form-control"></td>
+                        <td><input id="iNum" name="iNum"
+                                   type="text" placeholder="Employee ID" class="form-control"></td>
                     </tr>
                     <tr>
                         <td><label for="id_password">Password</label></td>
-                        <td><input id="id_password" name="password" 
+                        <td><input id="id_password" name="password"
                                    type="password" placeholder="" class="form-control"></td>
                     </tr>
                 </table>
@@ -30,7 +30,7 @@
                     </p>
                 {% endif %}
 
-                <input type="submit" value="Login" 
+                <input type="submit" value="Login"
                        class="btn btn-primary pull-right" />
                 <input type="hidden" name="next" value="{{ next }}" />
             </form>
@@ -41,7 +41,7 @@
     <li><a href="/employee/login">Go to Employee Login Page</a></li>
 
 	<div class="note-message-management-login" style="background: yellow;padding: 10;border: 20px;bottom: 10px;margin: 0 auto !important;position: absolute;">
-		
+
 	<p>
 	    <label><h4>NOTE:</h4> For Management access, one needs to signup as employee and request access for Management. </br>The profile will be verified by Company Cronus Admin and then authorization shall be granted</label>
 	</p>

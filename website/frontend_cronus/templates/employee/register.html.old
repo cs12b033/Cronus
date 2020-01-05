@@ -8,51 +8,51 @@
         <div class="lgn-container col-lg-8">
             <form id="register-form" method="POST" action="">
                 {% csrf_token %}
- 
+
                 <table class="table">
                     <tr>
                         <td><label for="iNum">I-Number</label></td>
                         <td>
                             <!-- <input type="text" name="I" readonly value="I""> -->
-                            <input id="iNum" name="iNum" 
-                                   type="text" placeholder="I341551" class="form-control" autocomplete="off">
+                            <input id="iNum" name="iNum"
+                                   type="text" placeholder="Employee ID" class="form-control" autocomplete="off">
                                </td>
                     </tr>
                     <tr>
                         <td><label for="name">Full Name</label></td>
-                        <td><input id="name" name="name" 
+                        <td><input id="name" name="name"
                                    type="text" placeholder="What's in a name?" class="form-control"></td>
                     </tr>
                     <tr>
                         <td><label for="designation">Designation</label></td>
-                        <td><input list="designation" name="designation" 
+                        <td><input list="designation" name="designation"
                                    placeholder="Senior Developer" class="form-control" autocomplete="off"></td>
                     </tr>
                     <tr>
                         <td><label for="tier">Tier</label></td>
-                        <td><input list="tier" name="tier" 
+                        <td><input list="tier" name="tier"
                                     placeholder="T3" class="form-control" autocomplete="off"></td>
-                        <td><input list="grade" name="grade" 
+                        <td><input list="grade" name="grade"
                                     placeholder="L2" class="form-control" autocomplete="off"></td>
                     </tr>
                     <tr>
                         <td><label for="experience">Experience</label></td>
-                        <td><input id="experience" name="experience" 
+                        <td><input id="experience" name="experience"
                                    type="number" placeholder="7" class="form-control" autocomplete="off"></td>
                     </tr>
                     <tr>
                         <td><label for="isManagement">Request Management access</label></td>
-                        <td><input id="isManagement" name="isManagement" 
+                        <td><input id="isManagement" name="isManagement"
                                    type="checkbox" class="form-control"></td>
                     </tr>
                     <tr>
                         <td><label for="password">Create password</label></td>
-                        <td><input id="password" name="password" 
+                        <td><input id="password" name="password"
                                    type="password" placeholder="Must be unique and strong" class="form-control"></td>
                     </tr>
                     <tr>
                         <td><label for="password2">Repeat password</label></td>
-                        <td><input id="password2" name="password2" 
+                        <td><input id="password2" name="password2"
                                    type="password" class="form-control"></td>
                     </tr>
                 </table>
@@ -63,7 +63,7 @@
                     </div>
                 {% endif %}
 
-                <input type="submit" value="Register" 
+                <input type="submit" value="Register"
                        class="btn btn-primary pull-right" />
                 <input type="hidden" name="next" value="{{ next }}" />
 
@@ -117,7 +117,7 @@
                 <option value="L4">
                 <option value="L5">
             </datalist>
-            
+
         </div>
     </div>
     <div class="employee-registration-note" style="position: absolute;bottom: 10px; border: 20px;padding: 20px;background: gray;width: 300px;">
@@ -133,17 +133,17 @@
 <!-- Add previous projects after login, as an option to update under accound settings -->
 <!-- <tr>
     <td><label for="previousProjects">Previous Projects</label></td>
-    <td><input id="previousProjects" name="previousProjects" 
+    <td><input id="previousProjects" name="previousProjects"
                type="text" class="form-control"></td>
 </tr> -->
 <!-- <tr>
     <td><label for="entity">Entity</label></td>
-    <td><input id="entity" name="entity" 
+    <td><input id="entity" name="entity"
                type="text" class="form-control"></td>
 </tr>
 <tr>
     <td><label for="organization">Organization</label></td>
-    <td><input id="organization" name="organization" 
+    <td><input id="organization" name="organization"
                type="text" class="form-control"></td>
 </tr> -->
 <!-- <tr>
