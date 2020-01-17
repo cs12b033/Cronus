@@ -12,6 +12,7 @@
 * Fix url misconfigured for management
 * Include two-factor authentication for admins (maybe from Google Authenticator app)
 * create indexes for iNum in all database tables, to make search faster
+* Explore integration with sim-rank, page-rank, ML with current working system
 
 		## TRIVIAL
 * Write Selenium scripts to test
