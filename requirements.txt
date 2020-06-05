@@ -2,7 +2,7 @@ asgiref==3.2.3
 beautifulsoup4==4.8.2
 bootstrap4==0.1.0
 dataclasses==0.7
-Django==3.0.2
+Django==3.0.7
 django-admin-honeypot==1.1.0
 django-bootstrap4==1.1.1
 djangorestframework==3.11.0
